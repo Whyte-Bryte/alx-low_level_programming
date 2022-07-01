@@ -1,33 +1,32 @@
 #include <stdio.h>
 
 /**
- * main - prints all possible different combinations of three digits
- * Return: Always 0 (Success)
+ *main -> assign a random number to the variable n each time it is executed
+ *and print the last digit of the number stored in the variable n
+ *Return: Always 0 (Success)
  */
 int main(void)
 {
-int n, m, l;
-
-for (n = 48; n < 58; n++)
+int ch;
+int n;
+for (ch = 48; ch <= 57; ch++)
 {
-for (m = 49; m < 58; m++)
+for (n = 49; n <= 57; n++)
 {
-for (l = 50; l < 58; l++)
+if (n > ch)
 {
-if (l > m && m > n)
-{
+putchar(ch);
 putchar(n);
-putchar(m);
-putchar(l);
-if (n != 55 || m != 56)
+if (ch != 56 || n != 57)
 {
-putchar(',');
-putchar(' ');
+putchar(44);
+putchar(32);
 }
 }
 }
 }
-}
-putchar('\n');
+
+putchar(10); /* this is an ascii code for new line*/
+
 return (0);
 }
