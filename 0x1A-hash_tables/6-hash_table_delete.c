@@ -28,5 +28,3 @@ void hash_table_delete(hash_table_t *ht)
 	free(head->array);
 	free(head);
 }
-Footer
-© 2022 GitHub, Inc.
